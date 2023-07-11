@@ -8,10 +8,9 @@ outlook = win.Dispatch("Outlook.Application")
 mapi = outlook.GetNamespace("MAPI")
 now = datetime.now()
 month = str(int(now.strftime("%m"))-1).zfill(2)
-# for idx, folder in enumerate(mapi.Folders(1).Folders(2).Folders):
-#     print(idx + 1, folder)
+
 def autoRetrive(month):
-    parentDir = r"\\172.16.10.166\備份資料夾\08作業風險專區\112年度作業風險\KRI每月通報表"
+    parentDir = r"\\172.16.10."
     path = os.path.join(parentDir, month)
     
     if not os.path.exists(path):
